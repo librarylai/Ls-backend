@@ -2,7 +2,7 @@
   "name": "member",
   "version": "0.0.0",
   "private": true,
-  "main": "app.js",
+  "main": "./bin/www",
   "scripts": {
     "start": "nodemon ./bin/www --exec babel-node"
   },
