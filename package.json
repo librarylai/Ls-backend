@@ -8,7 +8,6 @@
     "build:prod": "webpack --mode=production -p",
     "start-build": "nodemon dist/main.bundle.js",
     "start": "nodemon ./bin/www --exec babel-node"
-
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -27,6 +26,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "devDependencies": {
+    "@babel/node": "^7.8.4",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-loader": "7",
