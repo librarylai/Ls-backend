@@ -1,6 +1,6 @@
 require('dotenv').config()
 
-module.exports = {
+export default {
   mysql: {
     host: process.env.HOST,
     user: process.env.DATABASE_USER,
