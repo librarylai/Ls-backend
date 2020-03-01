@@ -4,7 +4,7 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-let memberRouter = require('./routes/member')
+let memberRouter = require('./src/routes/member')
 var app = express();
 
 // view engine setup
