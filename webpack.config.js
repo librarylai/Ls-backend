@@ -8,7 +8,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'dist'),
         filename: '[name].bundle.js',
-        libraryTarget: 'commonjs2',
+        libraryTarget: 'commonjs',
     },
     module: { //設定你的檔案選項
         rules: [{
