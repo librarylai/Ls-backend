@@ -6,14 +6,20 @@ module.exports = {
     externals: [nodeExternals()],
     entry: './bin/www',
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
+        libraryTarget: 'commonjs2'
     },
     module: { //設定你的檔案選項
         rules: [{
             test: /\.js$/,
             exclude: /node_modules/,
-            use: 'babel-loader'
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: ['@babel/preset-env']
+                }
+            }
         }, ],
     },
 }
