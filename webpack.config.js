@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     target: 'node',
     externals: [nodeExternals()],
-    entry: ['./bin/www', './app.js'],
+    entry: ['./app.js', './bin/www', ],
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',

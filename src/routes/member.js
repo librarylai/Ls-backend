@@ -6,4 +6,4 @@ let memberModifyController = new MemberModifyController()
 router.post('/register', memberModifyController.postRegister)
 router.post('/login', memberModifyController.postLogin)
 router.post('/update', memberModifyController.postUpdate)
-module.exports = router
+export default router
