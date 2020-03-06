@@ -1,22 +1,10 @@
 {
   "presets": [
-    [
-      "@babel/preset-env",
-      {
-        "targets": {
-          "esmodules": false
-        },
-        "node": "current",
-        "modules": false
-      }
-    ]
+    ["@babel/preset-env", {
+      "useBuiltIns": false
+    }]
   ],
   "plugins": [
-    [
-      "@babel/plugin-transform-runtime",
-      {
-        "useESModules": false
-      }
-    ]
+    "@babel/plugin-transform-runtime"
   ]
 }
