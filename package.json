@@ -2,7 +2,7 @@
   "name": "member",
   "version": "0.0.0",
   "private": true,
-  "main": "./dist/main.bundle.js",
+  "main": "./app.js",
   "scripts": {
     "build": "webpack --mode=development -w",
     "build:prod": "rimraf dist && NODE_ENV=production webpack --mode=production -p",
