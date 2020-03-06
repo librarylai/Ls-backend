@@ -2,7 +2,7 @@
   "name": "member",
   "version": "0.0.0",
   "private": true,
-  "main": "./dist/main.bundle.js",
+  "main": ".app.js",
   "scripts": {
     "build": "webpack --mode=development -w",
     "build:prod": "rimraf dist && NODE_ENV=production webpack --mode=production -p",
@@ -36,6 +36,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11",
     "webpack-node-externals": "^1.7.2"
