@@ -7,7 +7,7 @@
           "esmodules": false
         },
         "node": "current",
-        "modules": "commonjs"
+        "modules": false
       }
     ]
   ],

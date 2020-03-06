@@ -1,5 +1,5 @@
 import dotenv from 'dotenv'
-dotenv.config() // import config from 'dotenv'
+dotenv.config()
 export default {
   mysql: {
     host: process.env.HOST,
