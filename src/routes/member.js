@@ -1,6 +1,4 @@
-import {
-    express
-} from 'express'
+import express from 'express'
 let router = express.Router()
 import MemberModifyController from '../controllers/modify_controller.js'
 console.log('MemberModifyController', new MemberModifyController().postRegister)
