@@ -1,7 +1,6 @@
 // DataBase
 import config from '../config/development_config'
-const mysql = require("mysql");
-
+import mysql from 'mysql'
 const connection = mysql.createConnection({
   host: config.mysql.host,
   user: config.mysql.user,
@@ -18,4 +17,4 @@ connection.connect(err => {
   }
 });
 
-module.exports = connection;
+export default connection;
