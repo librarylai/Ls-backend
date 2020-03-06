@@ -99,15 +99,15 @@ eval("/* WEBPACK VAR INJECTION */(function(__dirname) {\n\nvar _interopRequireDe
 
 /***/ }),
 
-/***/ "./bin/www":
-/*!*****************!*\
-  !*** ./bin/www ***!
-  \*****************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ "./bin/www.js":
+/*!********************!*\
+  !*** ./bin/www.js ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../app */ \"./app.js\");\n/* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_app__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! debug */ \"debug\");\n/* harmony import */ var debug__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(debug__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! http */ \"http\");\n/* harmony import */ var http__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(http__WEBPACK_IMPORTED_MODULE_2__);\n// usr/bin/env node\n\n/**\n * Module dependencies.\n */\n// var app = require('../app');\n// var debug = require('debug')('member:server');\n// var http = require('http');\n\n\n\ndebug__WEBPACK_IMPORTED_MODULE_1___default()('member:server')\n/**\n * Get port from environment and store in Express.\n */\n// var port = normalizePort(process.env.PORT || '3100');\nvar port = process.env.PORT || '3100';\n\n_app__WEBPACK_IMPORTED_MODULE_0___default.a.set('port', port);\n\n/**\n * Create HTTP server.\n */\n\nvar server = http__WEBPACK_IMPORTED_MODULE_2___default.a.createServer(_app__WEBPACK_IMPORTED_MODULE_0___default.a);\n\n/**\n * Listen on provided port, on all network interfaces.\n */\n\nserver.listen(port);\nserver.on('error', onError);\nserver.on('listening', onListening);\n\n/**\n * Normalize a port into a number, string, or false.\n */\n\nfunction normalizePort(val) {\n  var port = parseInt(val, 10);\n\n  if (isNaN(port)) {\n    // named pipe\n    return val;\n  }\n\n  if (port >= 0) {\n    // port number\n    return port;\n  }\n\n  return false;\n}\n\n/**\n * Event listener for HTTP server \"error\" event.\n */\n\nfunction onError(error) {\n  if (error.syscall !== 'listen') {\n    throw error;\n  }\n\n  var bind = typeof port === 'string' ?\n    'Pipe ' + port :\n    'Port ' + port;\n\n  // handle specific listen errors with friendly messages\n  switch (error.code) {\n    case 'EACCES':\n      console.error(bind + ' requires elevated privileges');\n      process.exit(1);\n      break;\n    case 'EADDRINUSE':\n      console.error(bind + ' is already in use');\n      process.exit(1);\n      break;\n    default:\n      throw error;\n  }\n}\n\n/**\n * Event listener for HTTP server \"listening\" event.\n */\n\nfunction onListening() {\n  console.log('server start on', port)\n  var addr = server.address();\n  var bind = typeof addr === 'string' ?\n    'pipe ' + addr :\n    'port ' + addr.port;\n  debug__WEBPACK_IMPORTED_MODULE_1___default()('Listening on ' + bind);\n}\n\n//# sourceURL=webpack:///./bin/www?");
+eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! @babel/runtime/helpers/interopRequireDefault */ \"@babel/runtime/helpers/interopRequireDefault\");\n\nvar _app = _interopRequireDefault(__webpack_require__(/*! ../app */ \"./app.js\"));\n\nvar _debug = _interopRequireDefault(__webpack_require__(/*! debug */ \"debug\"));\n\nvar _http = _interopRequireDefault(__webpack_require__(/*! http */ \"http\"));\n\n// usr/bin/env node\n\n/**\n * Module dependencies.\n */\n// var app = require('../app');\n// var debug = require('debug')('member:server');\n// var http = require('http');\n(0, _debug[\"default\"])('member:server');\n/**\n * Get port from environment and store in Express.\n */\n// var port = normalizePort(process.env.PORT || '3100');\n\nvar port = process.env.PORT || '3100';\n\n_app[\"default\"].set('port', port);\n/**\n * Create HTTP server.\n */\n\n\nvar server = _http[\"default\"].createServer(_app[\"default\"]);\n/**\n * Listen on provided port, on all network interfaces.\n */\n\n\nserver.listen(port);\nserver.on('error', onError);\nserver.on('listening', onListening);\n/**\n * Normalize a port into a number, string, or false.\n */\n\nfunction normalizePort(val) {\n  var port = parseInt(val, 10);\n\n  if (isNaN(port)) {\n    // named pipe\n    return val;\n  }\n\n  if (port >= 0) {\n    // port number\n    return port;\n  }\n\n  return false;\n}\n/**\n * Event listener for HTTP server \"error\" event.\n */\n\n\nfunction onError(error) {\n  if (error.syscall !== 'listen') {\n    throw error;\n  }\n\n  var bind = typeof port === 'string' ? 'Pipe ' + port : 'Port ' + port; // handle specific listen errors with friendly messages\n\n  switch (error.code) {\n    case 'EACCES':\n      console.error(bind + ' requires elevated privileges');\n      process.exit(1);\n      break;\n\n    case 'EADDRINUSE':\n      console.error(bind + ' is already in use');\n      process.exit(1);\n      break;\n\n    default:\n      throw error;\n  }\n}\n/**\n * Event listener for HTTP server \"listening\" event.\n */\n\n\nfunction onListening() {\n  console.log('server start on', port);\n  var addr = server.address();\n  var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;\n  (0, _debug[\"default\"])('Listening on ' + bind);\n}\n\n//# sourceURL=webpack:///./bin/www.js?");
 
 /***/ }),
 
@@ -220,13 +220,13 @@ eval("\n\nvar _interopRequireDefault = __webpack_require__(/*! @babel/runtime/he
 /***/ }),
 
 /***/ 0:
-/*!***********************!*\
-  !*** multi ./bin/www ***!
-  \***********************/
+/*!**************************!*\
+  !*** multi ./bin/www.js ***!
+  \**************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("module.exports = __webpack_require__(/*! ./bin/www */\"./bin/www\");\n\n\n//# sourceURL=webpack:///multi_./bin/www?");
+eval("module.exports = __webpack_require__(/*! ./bin/www.js */\"./bin/www.js\");\n\n\n//# sourceURL=webpack:///multi_./bin/www.js?");
 
 /***/ }),
 
