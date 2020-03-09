@@ -9,7 +9,7 @@ import express from 'express'
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import memberRouter from './src/routes/member'
+import memberRouter from './routes/member'
 import debug from 'debug';
 import http from 'http';
 debug('member:server')
