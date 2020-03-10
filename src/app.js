@@ -30,7 +30,7 @@ console.log(path.join(__dirname));
 // app.use(favicon(path.join(__dirname, '../src/build/favicon.ico')));
 app.get('*', function (req, res) {
   // res.render(path.join(__dirname + '/build/index.html'))
-  res.render('../src/build/index.html')
+  res.render(express.static(path.join(__dirname, '../src/build/index.html')))
 
 })
 app.use('/', memberRouter);
