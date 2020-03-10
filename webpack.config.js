@@ -5,6 +5,9 @@ module.exports = {
     target: 'node',
     externals: [nodeExternals()],
     entry: ['./src/app.js'],
+    node: {
+        __dirname: false
+    },
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: '[name].bundle.js',
@@ -17,7 +20,7 @@ module.exports = {
                 loader: 'babel-loader',
                 options: {
                     presets: ['@babel/preset-env']
-                }
+                },
             }
         }, ],
     },
