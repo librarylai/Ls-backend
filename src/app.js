@@ -49,7 +49,7 @@ app.use(function (err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-//////////////////
+/*... Server Setting Block ...*/
 var port = process.env.PORT || '3100';
 
 app.set('port', port);
