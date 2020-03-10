@@ -25,7 +25,8 @@ app.set('views', path.join(__dirname, '../src/views'));
 // app.set('views', path.join(__dirname, 'build'));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '../src/build')))
-console.log(path.join(__dirname, '../src/views'));
+app.use(express.static(path.join(__dirname)));
+console.log(path.join(__dirname));
 // app.use(favicon(path.join(__dirname, '../src/build/favicon.ico')));
 app.get('*', function (req, res) {
   // res.render(path.join(__dirname + '/build/index.html'))
