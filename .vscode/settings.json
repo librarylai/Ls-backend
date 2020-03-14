@@ -1,0 +1,7 @@
+{
+    "appService.zipIgnorePattern": [
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/7a538bac-bfbb-41d7-9fab-8db0f15c54d4/resourceGroups/testGroup/providers/Microsoft.Web/sites/lablog",
+    "appService.deploySubpath": ""
+}
