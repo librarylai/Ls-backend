@@ -24,7 +24,7 @@ app.set('views', path.join(__dirname, '../src/views'));
 // app.set('view engine', 'html');
 // app.set('views', path.join(__dirname, 'build'));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../src/build')))
+app.use(express.static(path.join(__dirname, '../src/build')));
 app.use(express.static(path.join(__dirname)));
 console.log(path.join(__dirname));
 // app.use(favicon(path.join(__dirname, '../src/build/favicon.ico')));
