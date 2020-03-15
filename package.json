@@ -2,11 +2,11 @@
   "name": "member",
   "version": "0.0.0",
   "private": true,
-  "main": "./dist/main.bundle.js",
+  "main": "main.bundle.js",
   "scripts": {
     "build": "webpack --mode=development -w",
     "build:prod": "rimraf dist && NODE_ENV=production webpack --mode=production -p",
-    "start-build": "nodemon dist/main.bundle.js ",
+    "start-build": "nodemon main.bundle.js ",
     "start": "nodemon ./src/app.js --exec babel-node "
   },
   "dependencies": {
