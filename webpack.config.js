@@ -9,7 +9,7 @@ module.exports = {
         __dirname: false
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname),
         filename: '[name].bundle.js',
     },
     module: { //設定你的檔案選項
