@@ -4,7 +4,7 @@ const path = require('path');
 module.exports = {
     target: 'node',
     externals: [nodeExternals()],
-    entry: ['./src/app.js'],
+    entry: ['./app.js'],
     node: {
         __dirname: false
     },

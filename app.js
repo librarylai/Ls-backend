@@ -4,7 +4,7 @@ import express from 'express'
 import path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
-import memberRouter from './routes/member'
+import memberRouter from './src/routes/member'
 import debug from 'debug';
 import http from 'http';
 import favicon from 'serve-favicon';
@@ -18,18 +18,18 @@ app.use(express.urlencoded({
 }));
 // view engine setup
 app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, '../src/views'));
+app.set('views', path.join(__dirname, './src/views'));
 
 // app.engine('html', consolidate.mustache);
 // app.set('view engine', 'html');
 // app.set('views', path.join(__dirname, 'build'));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, '../build')));
+app.use(express.static(path.join(__dirname, './build')));
 app.use(express.static(path.join(__dirname)));
 // app.use(favicon(path.join(__dirname, '../src/build/favicon.ico')));
 app.get('*', function (req, res) {
   // res.render(path.join(__dirname + '/build/index.html'))
-  res.render(express.static(path.join(__dirname, '../build/index.html')))
+  res.render(express.static(path.join(__dirname, './build/index.html')))
 
 })
 app.use('/', memberRouter);
