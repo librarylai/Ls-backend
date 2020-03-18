@@ -8,9 +8,10 @@
   "main": "main.bundle.js",
   "scripts": {
     "build": "webpack --mode=development -w",
-    "build:prod": "rimraf dist && NODE_ENV=production webpack --mode=production -p",
+    "build:prod": "rimraf dist && NODE_ENV=production && webpack --mode=production -p",
     "start-build": "nodemon main.bundle.js ",
-    "start": "nodemon ./app.js --exec babel-node "
+    "start-dev": "nodemon ./app.js --exec babel-node",
+    "start": "node main.bundle.js"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
