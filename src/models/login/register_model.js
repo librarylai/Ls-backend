@@ -58,4 +58,4 @@ class RegisterModelClass {
 }
 
 
-export default RegisterModelClass
+export default new RegisterModelClass

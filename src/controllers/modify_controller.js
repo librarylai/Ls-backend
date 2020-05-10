@@ -19,10 +19,9 @@ import {
 
 
 export default class MemberModifyController {
+
     constructor() {
-        this.registerModelClass = new RegisterModelClass
-        this.loginModelClass = new LoginModelClass
-        this.updateModelClass = new UpdateModelClass
+
     }
     postRegister(req, res, next) {
         // 獲取client端資料
@@ -37,7 +36,7 @@ export default class MemberModifyController {
                 result: EMAIL_FOEMAT_ERR_RESULT
             })
         } else {
-            this.registerModelClass.registerModel(memberInfoData).then(result => {
+            RegisterModelClass.registerModel(memberInfoData).then(result => {
                 // 若寫入成功則回傳
                 res.json({
                     status: "註冊成功。",
@@ -57,7 +56,7 @@ export default class MemberModifyController {
             email: req.body.email,
             password: setPasswordCryproSHA1(req.body.password),
         }
-        this.loginModelClass.memberLogin(memberInfoData).then(rows => {
+        LoginModelClass.memberLogin(memberInfoData).then(rows => {
             if (checkNull(rows) === true) {
                 res.json({
                     result: LOGIN_ERR_RESULT
@@ -104,7 +103,7 @@ export default class MemberModifyController {
                         return
                     }
                     const cryproPassword = setPasswordCryproSHA1(password)
-                    this.updateModelClass.updatePassword(id, cryproPassword).then((result) => {
+                    UpdateModelClass.updatePassword(id, cryproPassword).then((result) => {
                         res.json({
                             result: result
                         })

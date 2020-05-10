@@ -22,4 +22,4 @@ class LoginModelClass {
     }
 }
 
-export default LoginModelClass
+export default new LoginModelClass

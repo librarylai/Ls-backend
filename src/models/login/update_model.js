@@ -2,7 +2,7 @@ import db from '../connection_db'
 import {
     UPDATE_ERR_ERSULT
 } from '../../contents/result';
-export default class UpdateModelClass {
+class UpdateModelClass {
     updatePassword(id, password) {
         let result = {}
         return new Promise((resolve, reject) => {
@@ -21,3 +21,4 @@ export default class UpdateModelClass {
         })
     }
 }
+export default new UpdateModelClass
